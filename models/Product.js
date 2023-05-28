@@ -37,6 +37,10 @@ const schema = new Schema(
       enum: ["American", "Italian", "International"],
       required: true,
     },
+    img: {
+      type: String,
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
