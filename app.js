@@ -1,13 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-
 const authRouter = require("./routes/authRouter");
 const productsRouter = require("./routes/productsRouter");
 const orderRouter = require("./routes/orderRouter");
 
 const app = express();
 
-// CORS
 app.use(cors());
 app.use(express.json());
 
