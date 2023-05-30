@@ -46,35 +46,6 @@ const schema = new Schema(
   { versionKey: false, timestamps: true }
 );
 
-// schema.pre("find", function (next) {
-//   this.populate([
-//     {
-//       path: "owner",
-//       select: "name email phone address",
-//       model: "user",
-//     },
-//     {
-//       path: "products.product_data",
-//       populate: {
-//         path: "product",
-//         select: "name price company ingredients type cuisine img",
-//         model: "product",
-//       },
-//     },
-//   ]);
-//   next();
-// });
-
-// schema.pre("find", async function findAllSteps(next) {
-//   return this.stepModel
-//     .find()
-//     .populate({
-//       path: "form",
-//       strictPopulate: false,
-//     })
-//     .exec();
-// });
-
 const Order = model("order", schema);
 
 module.exports = {

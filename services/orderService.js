@@ -5,7 +5,7 @@ const getAllOrdersService = async (user, query) => {
   const { page = 1, limit = 10 } = query;
   const skip = (page - 1) * limit;
 
-  const orders = await Order.find({ owner }, "-createdAt -updatedAt", {
+  const orders = await Order.find({ owner }, "-updatedAt", {
     skip,
     limit,
   });
