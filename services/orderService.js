@@ -8,9 +8,7 @@ const getAllOrdersService = async (user, query) => {
   const orders = await Order.find({ owner }, "-createdAt -updatedAt", {
     skip,
     limit,
-  })
-    .populate("owner", "-createdAt -updatedAt -password")
-    .populate("products", "-createdAt -updatedAt");
+  });
   return orders;
 };
 

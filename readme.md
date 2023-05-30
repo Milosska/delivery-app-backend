@@ -52,5 +52,5 @@ For all the request here you'll need a JWT-token (avaliable after authentificati
 ```
 
 Routes avaliable:  
-**"/"** - GET request that allows to obtain all the orders made by user;
+**"/"** - GET request that allows to obtain all the orders made by user;  
 **"/"** - POST request that allows to add new order to user's order history;

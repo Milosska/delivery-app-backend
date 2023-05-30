@@ -1,4 +1,5 @@
 const { Product } = require("../models/Product");
+const { HttpError } = require("../utils/HttpError");
 
 const getProductsByCompanyService = async (company, query) => {
   const { page = 1, limit = 10 } = query;

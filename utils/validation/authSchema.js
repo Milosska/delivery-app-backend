@@ -19,7 +19,7 @@ const UserRegistrationSchema = Joi.object({
       "string.pattern.base": "password contains invalide option",
     }),
   phone: Joi.string()
-    .pattern(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
+    .pattern(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
     .required()
     .messages({
       "any.required": "field 'phone' is missing",
