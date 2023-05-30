@@ -14,7 +14,10 @@ const getAllOrdersService = async (user, query) => {
 
 const addOrderService = async (body, user) => {
   const { _id: owner } = user;
-  const newOrder = await Order.create({ ...body, owner });
+  const newOrder = (await Order.create({ ...body, owner })).populate(
+    "owner",
+    "name email phone address"
+  );
   return newOrder;
 };
 
